@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--cream);
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+}
+
+.wrapper {
+  width: min(100%, 414px);
+  margin-inline: auto;
+}
+
+.page-header {
+  background-color: var(--soft-red);
+  padding: 1em 1.3em;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1em;
+}
+
+.page-header .title {
+  color: var(--cream);
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.page-header .value {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: var(--very-pale-orange);
+}
+
+.chart {
+  background-color: var(--very-pale-orange);
+  padding: 1em 1.3em;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+.chart-title {
+  font-size: 1.2em;
+  color: var(--dark-brown);
+  margin-bottom: 2.5em;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  column-gap: 14px;
+  padding-bottom: 1.8em;
+  border-bottom: 2px solid var(--cream);
+}
+
+.chart-item {
+  position: relative;
+}
+
+.bar-chart {
+  background-color: var(--soft-red);
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bar-chart:is(:hover, :focus) {
+  background-color: hsl(10, 79%, 72%);
+}
+
+.bar-chart:is(:hover, :focus) + .tooltip {
+  bottom: calc(100% + 8px);
+  opacity: 1;
+}
+
+.bar-chart.active {
+  background-color: var(--cyan);
+}
+
+.bar-chart.active:hover {
+  background-color: hsl(186, 34%, 67%);
+}
+
+.chart-item .month {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--medium-brown);
+  font-size: 12px;
+}
+
+.chart-item-2 .bar-chart {
+  height: 200px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  width: calc(100% + 1em);
+  padding: 4px;
+  transform: translateX(-0.5em);
+  background-color: var(--dark-brown);
+  color: var(--very-pale-orange);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 300ms ease-in-out;
+}
+
+.chart-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.3em 0 0.5em;
+}
+
+.chart-footer .label {
+  color: var(--medium-brown);
+  font-size: 16px;
+}
+
+.chart-footer .num {
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+
+.chart-footer .spending-info .num {
+  font-size: 1.8em;
+}
+
+.chart-footer .stats {
+  text-align: right;
+  box-decoration-break: clone;
+}

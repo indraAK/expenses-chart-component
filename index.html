@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" type="module"></script>
+    <title>Awesome Chart</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="page-header">
+        <div class="balance">
+          <h4 class="title">My balance</h4>
+          <span class="value">$921.48</span>
+        </div>
+        <img src="./images/logo.svg" alt="Logo" class="logo" />
+      </header>
+
+      <div class="chart">
+        <h5 class="chart-title">Spending - Last 7 days</h5>
+        <div class="chart-container" id="chartContainer"></div>
+        <div class="chart-footer">
+          <div class="spending-info">
+            <p class="label">Total this month</p>
+            <p class="num">$478.33</p>
+          </div>
+          <div class="stats">
+            <p class="num">+2.4%</p>
+            <p class="label">from last month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
