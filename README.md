@@ -10,8 +10,8 @@ This is a solution to the Expenses chart component challenge on Frontend Mentor
 
 ## Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: [My Solution](https://expenses-chart-component-delta.vercel.app/)
+- Live Site URL: [https://expenses-chart-component-delta.vercel.app/](https://expenses-chart-component-delta.vercel.app/)
 
 ### Built with
 
